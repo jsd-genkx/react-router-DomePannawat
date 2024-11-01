@@ -6,6 +6,10 @@ import Contact from "./components/Contact";
 import Navigation from "./components/Navigation";
 import ProductList from "./components/ProductList";
 import ProductDetail from "./components/ProductDetail";
+import Profile from "./components/Profile";
+import ProfileInfo from "./components/ProfileInfo";
+import Orders from "./components/Orders";
+import Settings from "./components/Settings";
 
 
 function App() {
@@ -18,6 +22,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/profile/*" element={<Profile />} />
+        <Route path="info" element={<ProfileInfo />} />
+        <Route path="orders" element={<Orders />} />
+        <Route path="settings" element={<Settings />} />
       </Routes>
     </Router>
   );

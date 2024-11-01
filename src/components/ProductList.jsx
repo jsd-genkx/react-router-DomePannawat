@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; 
 
 const products = [
   { id: 1, name: "Product 1" },
@@ -8,6 +8,12 @@ const products = [
 ];
 
 function ProductList() {
+  const navigate = useNavigate(); 
+
+  const handleBackClick = () => {
+    navigate("/"); 
+  };
+
   return (
     <div>
       <br />
@@ -18,6 +24,8 @@ function ProductList() {
           </li>
         ))}
       </ul>
+      <br />
+      <button onClick={handleBackClick} className="text-blue-500 text-lg font-bold">Back</button> 
     </div>
   );
 }
